@@ -1,0 +1,14 @@
+{
+  "name": "node-gd-railway-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.mjs",
+  "scripts": {
+    "start": "node main.mjs"
+  },
+  "dependencies": {
+    "node-gd": "3.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

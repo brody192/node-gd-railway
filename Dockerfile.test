@@ -1,0 +1,19 @@
+FROM node:18.18.2-slim
+
+ENV NPM_CONFIG_UPDATE_NOTIFIER='false'
+ENV NPM_CONFIG_FUND='false'
+
+RUN apt update && apt install -y --no-install-recommends \
+    build-essential \
+    python3 \
+    libgd-dev
+
+RUN echo $LIBRARY_PATH && echo $LD_LIBRARY_PATH
+
+WORKDIR /app
+
+COPY . ./
+
+RUN npm install
+
+CMD ["npm", "run", "start"]
